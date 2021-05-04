@@ -1,8 +1,5 @@
 FROM ubuntu:xenial
-RUN apt-get update
-RUN apt-get install -y cron
-RUN apt-get install -y curl
-RUN apt-get install -y jq
+RUN apt-get update && apt-get install -y cron curl jq
 WORKDIR /opt/chimera/bin
 RUN curl https://devops-command-line-workshop.s3.eu-west-2.amazonaws.com/cliapp --output cliapp
 RUN chmod +x cliapp
